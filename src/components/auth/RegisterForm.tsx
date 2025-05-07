@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { useAuthStore } from "@/store/useAuthStore";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
 import type { AxiosError } from "axios";
@@ -102,14 +102,15 @@ export function RegisterForm() {
             {mutation.isPending ? "Logging in..." : "Login"}
           </Button>
         </form>
+
         <p className="text-sm text-center text-muted-foreground mt-4">
           Already registered?
-          <a
-            href="/login"
+          <Link
+            to="/login"
             className="text-primary underline hover:text-primary/80 transition-colors ml-1"
           >
-            Register
-          </a>
+            Log in
+          </Link>
         </p>
       </div>
     </div>

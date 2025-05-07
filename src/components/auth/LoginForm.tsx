@@ -3,7 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import { useAuthStore } from "@/store/useAuthStore";
 import { toast } from "sonner";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -88,12 +88,12 @@ export function LoginForm() {
         </form>
         <p className="text-sm text-center text-muted-foreground mt-4">
           Not registered?
-          <a
-            href="/register"
+          <Link
+            to="/register"
             className="text-primary underline hover:text-primary/80 transition-colors ml-1"
           >
             Create an account
-          </a>
+          </Link>
         </p>
       </div>
     </div>
