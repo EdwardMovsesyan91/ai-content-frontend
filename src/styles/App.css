@@ -1,0 +1,34 @@
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.5s ease-out forwards;
+}
+
+.animate-spin-slow {
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes pulse-caret {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.1);
+  }
+}
+
+.animate-caret-pulse {
+  animation: pulse-caret 1.2s ease-in-out infinite;
+}
