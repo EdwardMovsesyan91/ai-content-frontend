@@ -10,7 +10,7 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       className={`w-14 h-8 flex items-center px-1 rounded-full transition-colors duration-300 ${
         isDark ? "bg-muted" : "bg-blue-200"
-      }`}
+      } cursor-pointer`}
     >
       <div
         className={`w-6 h-6 rounded-full bg-background shadow-md flex items-center justify-center transform transition-transform duration-300 ${

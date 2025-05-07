@@ -15,7 +15,7 @@ export default function DesktopNav() {
       </Link>
       <button
         onClick={() => logout(null)}
-        className="hover:text-foreground transition-colors"
+        className="hover:text-foreground transition-colors cursor-pointer"
       >
         Logout
       </button>
