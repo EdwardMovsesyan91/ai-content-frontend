@@ -42,7 +42,7 @@ export default function PostsPage() {
   const postsToRender = view === "my" ? myPosts : publicPosts;
 
   return (
-    <div className="max-w-6xl mx-auto space-y-6">
+    <div className="max-w-2xl mx-auto space-y-6">
       <div className="flex gap-2">
         <Button
           variant={view === "my" ? "default" : "outline"}
@@ -58,7 +58,7 @@ export default function PostsPage() {
         </Button>
       </div>
 
-      <h1 className="text-2xl font-bold">
+      <h1 className="text-3xl font-bold">
         Browse {view === "my" ? "My" : "Public"} Posts
       </h1>
 
