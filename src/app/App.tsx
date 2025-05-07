@@ -2,15 +2,15 @@ import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import "../styles/App.css";
 import PrivateRoute from "../components/PrivateRoute";
-import LoginPage from "../routes/LoginPage";
 import DashboardPage from "../routes/DashboardPage";
 import { useAuthStore } from "@/store/useAuthStore";
 import Layout from "@/components/Layout";
 import EditPostPage from "@/routes/EditPostPage";
 import PostsPage from "@/routes/PostsPage";
 import PublicPostPage from "@/routes/PublicPostPage";
-import { LoginForm } from "@/components/auth/LoginForm";
 import { RegisterForm } from "@/components/auth/RegisterForm";
+import NotFoundPage from "@/routes/NotFoundPage";
+import { LoginForm } from "@/components/auth/LoginForm";
 
 function App() {
   const initAuth = useAuthStore((state) => state.initAuth);
@@ -26,8 +26,11 @@ function App() {
 
   return (
     <Routes>
+      {/* Public Routes */}
       <Route path="/login" element={<LoginForm />} />
       <Route path="/register" element={<RegisterForm />} />
+
+      {/* Protected Routes */}
       <Route element={<PrivateRoute />}>
         <Route element={<Layout />}>
           <Route path="/dashboard" element={<DashboardPage />} />
@@ -36,7 +39,9 @@ function App() {
           <Route path="/posts/:id" element={<PublicPostPage />} />
         </Route>
       </Route>
-      <Route path="*" element={<LoginPage />} />
+
+      {/* Catch-all Route */}
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }

@@ -43,7 +43,7 @@ export function RegisterForm() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background px-4">
+    <div className="min-h-dvh flex items-center justify-center bg-background px-6 text-foreground">
       <div className="w-full max-w-sm sm:max-w-md rounded-2xl shadow-lg p-6 sm:p-8 space-y-6 bg-card text-card-foreground">
         <h2 className="text-3xl font-bold text-center">Create Account</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">

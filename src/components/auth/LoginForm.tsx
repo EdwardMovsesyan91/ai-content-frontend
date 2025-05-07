@@ -41,7 +41,7 @@ export function LoginForm() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background px-4 text-foreground">
+    <div className="min-h-dvh flex items-center justify-center bg-background px-6 text-foreground">
       <div
         className="w-full max-w-sm sm:max-w-md sm:min-w-[410px] rounded-2xl shadow-lg p-6 sm:p-8 space-y-6
              bg-card text-card-foreground animate-fade-in duration-500 ease-out"
