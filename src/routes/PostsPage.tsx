@@ -65,7 +65,7 @@ export default function PostsPage() {
       {postsToRender.length === 0 ? (
         <p className="text-muted-foreground">No posts yet</p>
       ) : (
-        <div className="flex flex-col gap-6">
+        <div key={view} className="flex flex-col gap-6 fade-slide-up">
           {postsToRender.map((post) => (
             <PostCard key={post._id} post={post} canEdit={view === "my"} />
           ))}

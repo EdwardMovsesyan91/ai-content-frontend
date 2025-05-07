@@ -22,8 +22,15 @@ export default function DashboardPage() {
           Write Manually
         </Button>
       </div>
-
-      {tab === "generate" ? <GenerateTab /> : <ManualTab />}
+      {tab === "generate" ? (
+        <div key="generate" className="fade-in">
+          <GenerateTab />
+        </div>
+      ) : (
+        <div key="manual" className="fade-in">
+          <ManualTab />
+        </div>
+      )}
     </div>
   );
 }
